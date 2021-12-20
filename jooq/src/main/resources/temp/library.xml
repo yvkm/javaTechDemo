@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration xmlns="http://www.jooq.org/xsd/jooq-codegen-3.7.0.xsd">
+  <!-- Configure the database connection here -->
+  <jdbc>
+    <driver>com.mysql.cj.jdbc.Driver</driver>
+    <url>jdbc:mysql://10.8.0.1:3307/jooq</url>
+    <user>root</user>
+    <password>002289</password>
+  </jdbc>
+  <generator>
+    <!-- The default code generator. You can override this one, to generate your own code style.
+    Supported generators:
+    - org.jooq.util.JavaGenerator
+    - org.jooq.util.ScalaGenerator
+    Defaults to org.jooq.util.JavaGenerator
+
+    Note the classes have been moved to org.jooq.codegen or org.jooq.meta in jOOQ 3.11 -->
+    <name>org.jooq.util.JavaGenerator</name>
+    <database>
+      <!-- The database type. The format here is:
+      org.jooq.util.[database].[database]Database
+
+      Note the classes have been moved to org.jooq.codegen or org.jooq.meta in jOOQ 3.11 -->
+      <name>org.jooq.util.mysql.MySQLDatabase</name>
+      <!-- The database schema (or in the absence of schema support, in your RDBMS this
+      can be the owner, user, database name) to be generated -->
+      <inputSchema>jooq</inputSchema>
+      <!-- All elements that are generated from your schema
+      (A Java regular expression. Use the pipe to separate several expressions)
+      Watch out for case-sensitivity. Depending on your database, this might be important! -->
+      <includes>.*</includes>
+      <!-- All elements that are excluded from your schema
+      (A Java regular expression. Use the pipe to separate several expressions).
+      Excludes match before includes, i.e. excludes have a higher priority -->
+      <excludes></excludes>
+    </database>
+    <target>
+      <!-- The destination package of your generated classes (within the destination directory) -->
+      <packageName>yvkm.jooq</packageName>
+      <!-- The destination directory of your generated classes. Using Maven directory layout here -->
+      <directory>C:\Users\xieji\IdeaProjects\javaTechDemo\jooq\src\main\java</directory>
+    </target>
+  </generator>
+</configuration>
